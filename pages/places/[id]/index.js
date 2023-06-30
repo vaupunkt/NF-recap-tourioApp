@@ -34,7 +34,6 @@ export default function DetailsPage() {
   const { id } = router.query;
 
   const { data: place, isLoading, error } = useSWR(`/api/places/${id}`);
-  console.log(place);
 
   if (!isReady || isLoading || error) return <h2>Loading...</h2>;
 
